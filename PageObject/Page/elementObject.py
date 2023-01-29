@@ -44,7 +44,8 @@ class contactLocator():
 
     def inputMessage(self,message):
         self.driver.find_element(By.ID,self.getInputMessage).send_keys(message)
-        self.driver.get_screenshot_as_file("C:/Users/Qoin/OneDrive - PT. Loyalty Program Indonesia/Documents/MoonlayWeb/Screenshoot") 
+        self.driver.get_screenshot_as_file("Valid Input.png") 
+        self.driver.save_screenshot("C:/Users/Qoin/OneDrive - PT. Loyalty Program Indonesia/Documents/MoonlayWeb/Screenshoot")
         time.sleep(2)
         
 
@@ -62,7 +63,8 @@ class contactLocator():
     def failedSubmit(self):    
         
         if self.driver.find_element(By.CSS_SELECTOR,".error.text-danger").is_displayed():
-            self.driver.get_screenshot_as_file("C:/Users/Qoin/OneDrive - PT. Loyalty Program Indonesia/Documents/MoonlayWeb/Screenshoot") 
+            self.driver.get_screenshot_as_file("InvalidInput.png") 
+            self.driver.get_screenshot_as_file("C:/Users/Qoin/OneDrive - PT. Loyalty Program Indonesia/Documents/MoonlayWeb/Screenshoot")
         else:
             print("Failed")
 
