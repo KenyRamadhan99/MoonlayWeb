@@ -12,14 +12,14 @@ class contactLocator():
         self.driver = driver
 
 
-        self.getInputFirstName = Locators.getInputFirstName
-        self.getInputLastName = Locators.getInputLastName
-        self.getInputEmail = Locators.getInputEmail
+        self.getInputFirstName   = Locators.getInputFirstName
+        self.getInputLastName    = Locators.getInputLastName
+        self.getInputEmail       = Locators.getInputEmail
         self.getInputPhoneNumber = Locators.getInputPhoneNumber
-        self.getSelectDropdown = Locators.getSelectDropdown
-        self.getInputMessage = Locators.getInputMessage
-        self.getSubmitButton = Locators.getSubmitButton
-        self.getSuccessWarning = Locators.getSuccessWarning
+        self.getSelectDropdown   = Locators.getSelectDropdown
+        self.getInputMessage     = Locators.getInputMessage
+        self.getSubmitButton     = Locators.getSubmitButton
+        self.getSuccessWarning   = Locators.getSuccessWarning
     
     def inputFirstName(self,firstName):
         self.driver.find_element(By.ID,self.getInputFirstName).send_keys(firstName)
